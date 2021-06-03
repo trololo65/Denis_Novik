@@ -107,7 +107,8 @@ line-height: 22px;
 	line-height: 20px;
 	transform: rotate(-90deg);
 }
-.home--image {}
+.home--image {
+}
 .home--image img{
 	width: 100%;
 }
@@ -163,7 +164,9 @@ line-height: 22px;
 }
 
 .ps {}
-.skills--programs_item--text {}
+.skills--programs_item--text {
+	margin: 30px 0;
+}
 .ai {}
 .ae {}
 .figma {}
@@ -218,4 +221,117 @@ line-height: 22px;
 	font-size: 14px;
 	line-height: 17px;
 
+}
+
+
+@media (max-width: 986px){
+
+	.skills--programs{
+		flex-direction: column;
+		align-items: center;
+	}
+	.stars {
+		padding-bottom: 30px;
+	}
+	.home--image{
+		background: url(images/Denis2.jpg) no-repeat;
+	}
+}
+
+@media (max-width: 768px){
+	.header--menu{
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.header--item{
+		padding: 35px 0;
+		padding-left: 15px;
+		font-size: 25px;
+	}
+	.header--menu{
+		position: fixed;
+		top: -100%;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		
+		padding: 70px 0 0 0;
+		transition:all 0.5s ease 0s;
+		overflow: auto;
+		opacity: 1;
+		background-color: #fff;
+	}
+	.header--menu.active{
+		top: 0;
+	}
+	.header{
+		position: static;
+	}
+	.header--burger {
+		display: block;
+		width: 40px;
+		height: 30px;
+		position: relative;
+		z-index: 4;
+		top: 70px;
+		right: -90%;
+	}
+	.header--burger:before,
+	.header--burger:after {
+		content: '';
+		width: 100%;
+		height: 5px;
+		background-color: #000;
+		position: absolute;
+		right: 0;
+		transition:all 0.5s ease 0s;
+	}
+	.header--burger:after{
+		bottom: 0px;
+	}
+	.header--burger:before{
+		top: 0px;
+	}
+	.header--burger span{
+		width: 40px;
+		height: 5px;
+		background-color: #000;
+		position: absolute;
+		right: 0;
+		top: 12.5px;
+		transition:all 0.5s ease 0s;
+	}
+	.header--burger.active span{
+		transform: scale(0);
+	}
+	.header--burger.active:before{
+		transform: rotate(-405deg);
+		top: 12.5px;
+	}
+	.header--burger.active:after{
+		transform: rotate(405deg);
+		bottom: 12.5px;
+	}
+	.content {
+		padding-top: 30px;
+	}
+	.home--info{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.language{
+		position: absolute;
+		right: 20px;
+		top: -100%;
+		
+		font-size: 25px;
+		transition:all 0.5s ease 0s;
+	}
+	body.lock{
+		overflow: hidden;
+	}
+	.language.active{
+		top: 88%;
+	}
 }
